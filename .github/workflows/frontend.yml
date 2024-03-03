@@ -16,8 +16,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: "Manage Dependencies"
-        uses: "../.github/actions/cache-node-dependencies"
+      - name: "Manage NPM Dependencies"
+        uses: ../.github/actions/cache-node-dependencies
         with:
           working-dir: "./front-end-app"
 
