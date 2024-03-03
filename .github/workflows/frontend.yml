@@ -19,7 +19,7 @@ jobs:
       - name: "Manage NPM Dependencies"
         uses: ./.github/actions/cache-node-dependencies
         with:
-          working-dir: "./front-end-app"
+          app-name: "react-app"
 
       - name: Build
         run: npm run build
