@@ -6,6 +6,10 @@ inputs:
     description: "The app name"
     required: false
     default: "app"
+  working-directory:
+    description: "The working directory"
+    required: false
+    default: "."
 runs:
   using: "composite"
   steps:
