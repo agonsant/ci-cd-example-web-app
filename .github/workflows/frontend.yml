@@ -17,15 +17,15 @@ jobs:
         uses: actions/checkout@v3
 
       - name: "Cache Dependencies"
-        uses: "actions/cache@v3"
-        id: cache-node-modules
+        uses: "actions/cache@v4"
+        id: cache-front-node-modules
         with:
-          path: "node_modules"
-          key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
+          path: "./front-end-app/node_modules"
+          key: front-node-modules-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install dependencies
         # only run npm i if cache not found
-        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        if: steps.cache-front-node-modules.outputs.cache-hit != 'true'
         run: npm ci
 
       - name: Build
