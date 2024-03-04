@@ -60,10 +60,9 @@ jobs:
         run: npm install netlify-cli@17.10.1 -g
 
       - name: Deploy to Netlify
-        id: netlify_deploy
-        # Usamos el comando netlify deploy de la carpeta dist con el token de autenticación y el id del sitio
+        id: netlify_deploy # Usamos el comando netlify deploy de la carpeta dist con el token de autenticación y el id del sitio
         run: |
-          netlify deploy \ 
+          netlify deploy \
             --dir dist \
             --site ${{ secrets.NETLIFY_SITE_ID }} \
             --auth ${{ secrets.NETLIFY_API_TOKEN }} \
