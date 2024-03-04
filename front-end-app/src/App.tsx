@@ -18,6 +18,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <p>Change to cache: 1</p>
+      <p>Change to deploy: 1</p>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
