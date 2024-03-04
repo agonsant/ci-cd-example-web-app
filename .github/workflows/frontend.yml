@@ -49,6 +49,6 @@ jobs:
       - name: Build
         uses: docker/build-push-action@v5 # Utilizamos la acción de build y push de docker del marketplace. Esto hace el docker build y el docker push por debajo
         with:
-          context: .
+          context: ./front-end-app # El working directory
           push: true
           tags: ${{ github.actor }}/ci-cd-example-front:latest # Añadimos el tag de la imagen
